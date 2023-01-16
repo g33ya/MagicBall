@@ -1,0 +1,109 @@
+html, body {
+    width:50vw;
+    height: 50vh;
+    background-color: rgb(30,0,83)
+}
+
+@media (orientation: portrait) {
+
+    body {
+        background-color: rgb(30,0,83);
+    }
+
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+    }
+    .wrapper .mobileoverlay .mobileoverlayimage{
+        width: 100%;
+        height: 100%;
+        left: 50%
+    }
+
+    .wrapper .overlay .overlayimage{
+        display:none;
+        width: 100%;
+        height: 100%;
+        left: 50%
+    }
+
+    .wrapper .balldiv .ball{
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        width: 80%;
+        height: auto;
+    }
+
+    .wrapper .text {
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        text-align: center;
+        width: 40%;
+        height: auto;
+        z-index: 3;
+        
+
+    }
+
+    .wrapper .text .answer {
+        color: rgb(194, 87, 87);
+        opacity: 0;
+        font-size: 1.4rem;
+        z-index: 4;
+        animation: fadeIn ease 5s;
+        font-family: 'Comfortaa', cursive;
+    }
+    
+
+
+}
+
+
+@media (orientation: landscape) {
+
+    body {
+        background-color: rgb(30,0,83)
+    }
+
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+    }
+    .wrapper .overlay .overlayimage{
+        width: 100%;
+        height: 100%;
+        left: 50%
+    }
+
+    .wrapper .balldiv .ball{
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+    }
+
+    .wrapper .text {
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        text-align: center;
+        width: 20%;
+        height: auto;
+        background-color:aqua;
+        z-index: 3;
+}
+
+}
