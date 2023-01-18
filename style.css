@@ -1,43 +1,46 @@
-html, body {
-    width:50vw;
-    height: 50vh;
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Comfortaa', cursive;
+    overflow-x: hidden;
+    overflow-x: hidden;
+    margin:0 auto;
     background-color: rgb(30,0,83)
 }
 
-@media (orientation: portrait) {
-
-    body {
-        background-color: rgb(30,0,83);
+    .wrapper .mobileoverlay {
+        display:none;
     }
 
     .wrapper {
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         position: fixed;
         left: 50%;
         transform: translate(-50%, -50%);
         top: 50%;
     }
-    .wrapper .mobileoverlay .mobileoverlayimage{
+    .overlay .overlayimage{
+        position:fixed;
         width: 100%;
         height: 100%;
-        left: 50%
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
-    .wrapper .overlay .overlayimage{
-        display:none;
-        width: 100%;
-        height: 100%;
-        left: 50%
-    }
-
+    
     .wrapper .balldiv .ball{
         position: fixed;
         left: 50%;
         transform: translate(-50%, -50%);
         top: 50%;
-        width: 80%;
+        width: 25vw;
+        min-width: 300px;
         height: auto;
+        animation: shake 0.5s;
+        animation-iteration-count: 3;
     }
 
     .wrapper .text {
@@ -46,64 +49,41 @@ html, body {
         transform: translate(-50%, -50%);
         top: 50%;
         text-align: center;
-        width: 40%;
+        width: 15vw;
         height: auto;
         z-index: 3;
+        font-size: 2vw;
+        animation:1s ease 2s normal forwards 1 fadein;
+        -webkit-animation:1s ease 2s normal forwards 1 fadein;
+        opacity:0;
+    }
+
+    
+        @keyframes fadein{from{opacity:0}
+        to{opacity:1}
+        }
+        
+        @-webkit-keyframes fadein{from{opacity:0}
+        to{opacity:1}
+        }
+    
+        @keyframes shake {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            10% { transform: translate(-50%, -50%) rotate(-1deg); }
+            20% { transform: translate(-52%, -49%) rotate(1deg); }
+            30% { transform: translate(-52%, -51%) rotate(0deg); }
+            40% { transform: translate(-50%, -50%) rotate(1deg); }
+            50% { transform: translate(-50%, -51%) rotate(-1deg); }
+            60% { transform: translate(-52%, -50%) rotate(0deg); }
+            70% { transform: translate(-52%, -50%) rotate(-1deg); }
+            80% { transform: translate(-50%, -50%) rotate(1deg); }
+            90% { transform: translate(-50%, -51%) rotate(0deg); }
+            100% { transform: translate(-50%, -51%) rotate(-1deg); }
+          }
+
         
 
-    }
+        
 
-    .wrapper .text .answer {
-        color: rgb(194, 87, 87);
-        opacity: 0;
-        font-size: 1.4rem;
-        z-index: 4;
-        animation: fadeIn ease 5s;
-        font-family: 'Comfortaa', cursive;
-    }
     
 
-
-}
-
-
-@media (orientation: landscape) {
-
-    body {
-        background-color: rgb(30,0,83)
-    }
-
-    .wrapper {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 50%;
-    }
-    .wrapper .overlay .overlayimage{
-        width: 100%;
-        height: 100%;
-        left: 50%
-    }
-
-    .wrapper .balldiv .ball{
-        position: fixed;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 50%;
-    }
-
-    .wrapper .text {
-        position: fixed;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        text-align: center;
-        width: 20%;
-        height: auto;
-        background-color:aqua;
-        z-index: 3;
-}
-
-}

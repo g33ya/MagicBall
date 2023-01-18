@@ -13,12 +13,14 @@
 
   </head>
   <body>
+
+    <div class="overlay">
+        <img class = "overlayimage" src="backgroundoverlay.png" alt="overlay">
+    </div>
     <!-- Wrapper class adjusting overlay for both computer/mobile sizes -->
 
     <div class="wrapper">
-        <div class="overlay">
-            <img class = "overlayimage" src="backgroundoverlay.png" alt="overlay">
-        </div>
+        
 
         <div class="mobileoverlay">
             <img class = "mobileoverlayimage" src="mobileoverlay.png" alt="mobileoverlay">
@@ -27,11 +29,11 @@
         <!-- 8-Ball Image -->
         <div class= "balldiv">
             <button class="ballbutton">
-                <img class="ball" src="8ballimage.png" alt="8ball">
+                <img class="ball" id="ballAni" src="8ballimage.png" alt="8ball">
             </button>
         </div>
 
-        <div class="text">
+        <div class="text" id="textBox">
             <p class="answer"></p>
         </div>
 
