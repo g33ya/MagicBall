@@ -12,42 +12,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 
   </head>
+
   <body>
 
-    <div class="overlay">
+      <!-- Overlay for computer/tablet screens -->
+      <div class="overlay">
         <img class = "overlayimage" src="backgroundoverlay.png" alt="overlay">
-    </div>
+      </div>
 
-    <div class="mobileoverlay">
-      <img class = "mobileoverlayimage" src="mobileoverlay.png" alt="mobileoverlay">
-  </div>
-    <!-- Wrapper class adjusting overlay for both computer/mobile sizes -->
+      <!-- Overlay for mobile screens -->
+      <div class="mobileoverlay">
+        <img class = "mobileoverlayimage" src="mobileoverlay.png" alt="mobileoverlay">
+      </div>
+    
+      <div class="wrapper">
 
-    <div class="wrapper">
-
+         <!--Rounded text logo -->
         <div class="textlogo">
           <img class="textlogoimg" src="magicballtext.png">
         </div>
 
-        <!-- 8-Ball Image -->
+        <!-- 8-Ball Image/Button -->
         <div class= "balldiv">
             <button class="ballbutton">
                 <img class="ball" id="ballAni" src="8ballimage.png" alt="8ball">
             </button>
         </div>
 
-        <div class="text" id="textBox">
+        <!-- Ball response (retrieved using script) -->
+        <div class="text" id="textBox">                                                                               
             <p class="answer"></p>
         </div>
 
         <div class="instructiontext">
           <p><i>Click the ball to shake me!</i></p>
         </div>
-    </div>
 
-    
-
-    
     </div>
 
     <script src="script.js"></script>

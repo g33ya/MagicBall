@@ -13,7 +13,6 @@ body {
         visibility:hidden;
     }
 
-
     .wrapper {
         width: 100vw;
         height: 100vh;
@@ -22,6 +21,7 @@ body {
         transform: translate(-50%, -50%);
         top: 50%;
     }
+
     .overlay .overlayimage{
         position:fixed;
         width: 100%;
@@ -42,6 +42,12 @@ body {
         z-index: 4;
     }
 
+    .wrapper .balldiv {
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+    }
     .wrapper .balldiv .ball{
         position: fixed;
         left: 50%;
@@ -83,7 +89,7 @@ body {
     }
     
 
-    
+        /* Text fade-in animation (inside ball) */
         @keyframes fadein{from{opacity:0}
         to{opacity:1}
         }
@@ -92,6 +98,7 @@ body {
         to{opacity:1}
         }
     
+        /* Ball shake animation */
         @keyframes shake {
             0% { transform: translate(-50%, -50%) rotate(0deg); }
             10% { transform: translate(-50%, -50%) rotate(-1deg); }
@@ -106,7 +113,9 @@ body {
             100% { transform: translate(-50%, -51%) rotate(-1deg); }
           }
 
-          @media (orientation: portrait) {
+
+    /* Adapts CSS for mobile screens */
+    @media (orientation: portrait) {
             
         .overlay .overlayimage{
                 display: none;
@@ -150,4 +159,4 @@ body {
             opacity:0;
         }
 
-        }
+    }
